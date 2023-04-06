@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InTradeShop</title>
+</head>
+<body>
+    <h1>Agregar nuevo producto</h1>
+    <br>
+    <h3>Datos del producto</h3>
+    <form action="/misproductos" method="post">
+        <br>
+        <div class="form-group">
+            <input id="nombre "name="nombre" class="form-group" type="text" placeholder="Nombre producto">
+         </div>
+         <br>
+         <div class="form-group">
+            <input id="precio" name="precio" class="form-group" type="text" placeholder="Precio producto">
+         </div>
+         <br>
+         <div class="form-group">
+            <input id="descripcion" name="descripcion" class="form-group" type="text" placeholder="Breve descripcion">
+         </div>
+         <br>
+         <div class="form-group">
+            <input id="cantidad" name="cantidad" class="form-group" type="text" placeholder="Cantidad unitaria">
+         </div>
+         <br>
+         <div class="form-group">
+           <select id="categoria" name="categoria">
+             <option value="Camisas">Camisas</option>
+             <option value="Playera">Playera</option>
+             <option value="Pantalon">Pantalon</option>
+             <option value="Zapatos">Zapatos</option>
+             <option value="Accesorios">Accesorios</option>
+             <option value="Bolsos">Bolsos</option>
+           </select>
+         </div>
+         <br>
+         <div class="form-group">
+            <input id="imagen" name="imagen" class="form-group" type="file">
+         </div>
+         <br>
+         <button class="btn btn-primary" type="submit">Añadir</button>
+    </form>
+</body>
+</html>
