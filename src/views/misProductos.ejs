@@ -28,7 +28,23 @@
                     <td><%= productos[i].idProducto %></td>
                     <td><%= productos[i].nomProducto %></td>
                     <td><%= productos[i].cantidad%></td> 
-                    <td>Editar   |   Eliminar    |    Detalle</td>  
+                    <td>
+                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                            <form class="form-inline" method="get" action="/misproductos/editar/<%=productos[i].idProducto%>">
+                                <button type="submit">Editar</button>
+                            </form>
+                        </div>
+                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                            <form class="form-inline" method="get" action="/misproductos/eliminar/<%=productos[i].idProducto%>">
+                                <button type="submit">Eliminar</button>
+                            </form>
+                        </div> 
+                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                            <form class="form-inline" method="get" action="/misproductos/detalle/<%=productos[i].idProducto%>">
+                                <button type="submit">Detalle</button>
+                            </form>
+                        </div> 
+                    </td>  
                </tr> 
                <% } %>      
             </tbody>

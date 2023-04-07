@@ -1,6 +1,7 @@
 //Conexion de prueba
 //const getUsuarios = require('./controller/producto.js');
 //const addProducto = require('./controller/producto.js');
+//const detalleProducto = require('./controller/producto.js');
 const conexion = require('./conexion');
 
 /*
@@ -20,6 +21,14 @@ async function agregarProducto(){
         console.error(error);
     }   
 }
-
-agregarProducto();
+async function detalleProducto(idProducto){
+    try {
+      const {data:producto} = await conexion.from('producto').select().eq('idProducto',idProducto).single();
+      console.log(producto);
+    } catch (error) {
+      console.error(error);
+    }
+}
+detalleProducto(7); 
+//agregarProducto();
 //showUsuarios();

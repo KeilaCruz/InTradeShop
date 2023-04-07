@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InTradeShop</title>
+</head>
+<body>
+    <form method="post" action="/misproductos/eliminar/<%= informacion.idProducto%>">
+        <div>
+            <input id="identificador" name="identificador" value="<%= informacion.idProducto%>">
+        </div>
+        <br>
+        <div>
+            <input id="nombre" name="nombre" value="<%= informacion.nomProducto%>">
+        </div>
+        <br>
+        <div>
+            <input id="precio" name="precio" value="<%= informacion.precio%>">
+        </div>
+        <br>
+        <div>
+            <input id="imagen" name="imagen" value="<%= informacion.imagen%>">
+        </div>
+        <br>
+        <div>
+            <input id="cantidad" name="cantidad" value="<%= informacion.cantidad%>"> 
+        </div>
+        <br>
+        <div>
+          <input id="cantegoria" name="categoria" value="<%= informacion.categoria%>">
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Eliminar</button>
+</body>
+</html>
